@@ -13,10 +13,16 @@ public class MathUtils {
         return x * y;
     }
 
-    public double divide(int x, int y) {
+    public int divide(int x, int y) {
         if (y == 0) {
-            return -1.0; 
+            return -1; 
         }
-        return (double) x / y;
+        return x / y;
+    }
+    public static void main(String[] args)
+    {
+        MathUtils cal = new MathUtils();
+        int result = cal.subtract(7, 4);
+        System.out.println(result);
     }
 }

@@ -1,29 +1,35 @@
 package com.jenkins;
+import static org.junit.Assert.*;
+import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
 
-class MathUtilsTest {
-    private MathUtils mathUtils;
-  
-    void setUp() {
-        mathUtils = new MathUtils();
+public class MathUtilsTest {
+
+    @Test
+    public void testAdd() {
+        MathUtils calculator = new MathUtils();
+        int result = calculator.add(2, 3);
+        assertEquals(5, result);
     }
 
-    void testAdd() {
-        assertEquals(11, mathUtils.add(7, 4));
+    @Test
+    public void testSubtract(){
+        MathUtils calculator = new MathUtils();
+        int result = calculator.subtract(7, 4);
+        assertEquals(3, result);
     }
 
-    
-    void testSubtract() {
-        assertEquals(7, mathUtils.subtract(15, 8));
+    @Test
+    public void testMultiply(){
+        MathUtils calculator = new MathUtils();
+        int result = calculator.multiply(3, 4);
+        assertEquals(12, result);
     }
 
-    void testMultiply() {
-        assertEquals(33, mathUtils.multiply(11, 3));
-    }
-
-    void testDivide() {
-        assertEquals(9.0, mathUtils.divide(81, 9));
-        assertEquals(-1.0, mathUtils.divide(139, 0));
+    @Test
+    public void testDivide(){
+        MathUtils calculator = new MathUtils();
+        int result = calculator.divide(10, 2);
+        assertEquals(5, result);
     }
 }
